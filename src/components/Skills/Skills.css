@@ -1,0 +1,94 @@
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+.skills {
+  background-color: var(--second-bg-color);
+}
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+  color: unset;
+}
+.skills-heading {
+  color: var(--text-color);
+}
+.skills-heading  span{
+  color: var(--main-color);
+}
+.skills-subheading {
+  color: var(--text-color);
+}
+.skills-progress h3 {
+  color: var(--text-color);
+}
+.skills-content {
+  position: relative;
+  border: .2rem solid var(--main-color);
+  border-radius: .6rem;
+  padding: .5rem 1.5rem;
+  z-index: 1;
+  overflow: hidden;
+}
+.skills-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--bg-color);
+  z-index: -1;
+  transition: .5s;
+}
+.skills-content:hover::before {
+  width: 100%;
+}
+.skills-progress {
+  padding: 1rem 0;
+}
+.skills-progress h3 {
+  display: flex;
+  justify-content: space-between;
+}
+.skills-progress .bar {
+  height: 2rem;
+  border: .2rem solid var(--main-color);
+  border-radius: .6rem;
+  padding: .4rem;
+  margin: 1rem 0;
+}
+.skills-progress .bar span {
+  display: block;
+  height: 100%;
+  border-radius: .3rem;
+  background-color: var(--main-color);
+}
+.column:nth-child(1) .skills-progress:nth-child(1) .bar span {
+  width: 90%;
+}
+.column:nth-child(1) .skills-progress:nth-child(2) .bar span {
+  width: 80%;
+}
+.column:nth-child(1) .skills-progress:nth-child(3) .bar span {
+  width: 65%;
+}
+.column:nth-child(1) .skills-progress:nth-child(4) .bar span {
+  width: 90%;
+}
+.column:nth-child(1) .skills-progress:nth-child(5) .bar span {
+  width: 80%;
+}
+.column:nth-child(2) .skills-progress:nth-child(1) .bar span {
+  width: 95%;
+}
+.column:nth-child(2) .skills-progress:nth-child(2) .bar span {
+  width: 80%;
+}
+.column:nth-child(2) .skills-progress:nth-child(3) .bar span {
+  width: 85%;
+}
+.column:nth-child(2) .skills-progress:nth-child(4) .bar span {
+  width: 80%;
+}

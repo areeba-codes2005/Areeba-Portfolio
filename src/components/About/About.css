@@ -1,0 +1,86 @@
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+.about {
+  background-color: var(--second-bg-color);
+}
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+  color: unset;
+}
+.about-heading {
+ color: var(--text-color);
+}
+.about-heading span {
+   color: var(--main-color);
+}
+.about-img-box {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-img-box img {
+  width: 70%;
+  border-radius: 50%;
+  border: .2rem solid var(--main-color);
+}
+.about-img-box .circle-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border-top: .2rem solid var(--second-bg-color);
+  border-bottom: .2rem solid var(--second-bg-color);
+  border-left: .2rem solid var(--main-color);
+  border-right: .2rem solid var(--main-color);
+  animation: aboutSpinner 8s linear infinite;
+}
+.about__subtitle {
+  color: var(--text-color);
+}
+.about-description {
+  color: var(--text-color);
+}
+.read-more-btn{
+  position: relative;
+  overflow: hidden;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  font-weight: 600;
+  border: .2rem solid var(--main-color);
+  border-radius: .4rem;
+  transition: .5s;
+  z-index: 1;
+}
+ .read-more-btn:hover {
+  color: var(--main-color);
+}
+ .read-more-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--bg-color);
+  z-index: -1;
+  transition: .5s ;
+}
+.read-more-btn:hover::before {
+  width: 100%;
+}
+@keyframes aboutSpinner {
+  100% {
+     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

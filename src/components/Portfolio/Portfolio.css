@@ -1,0 +1,98 @@
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+.portfolio {
+  background-color: var(--bg-color);
+}
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+  color: unset;
+}
+.port-heading {
+  color: var(--text-color);
+}
+.port-heading  span{
+  color: var(--main-color);
+}
+.project-box {
+  border-left: .2rem solid var(--main-color);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;  */
+   height: 100%;
+  }
+.design-box1 {
+  position: relative;
+  padding-left: 1.2rem;
+  }
+.design-box1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -0.6rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+.design-box {
+  position: relative;
+  z-index: 0;
+  padding: 1rem;
+  border: .2rem solid var(--main-color);
+  border-radius: .6rem;
+  overflow: hidden;
+}
+.design-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--second-bg-color);
+  z-index: -1;
+  transition: .5s;
+}
+.design-box:hover::before {
+  width: 100%;
+}
+.web-title {
+  color: var(--main-color);
+}
+.pro-des {
+  color: var(--text-color);
+}
+.project-btn{
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  font-weight: 600;
+  border: .2rem solid var(--main-color);
+  border-radius: .4rem;
+  transition: .5s;
+  z-index: 0;
+}
+ .project-btn:hover {
+  color: var(--main-color);
+}
+ .project-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--bg-color);
+  z-index: -1;
+  transition: .5s ;
+}
+.project-btn:hover::before {
+  width: 100%;
+}

@@ -1,0 +1,142 @@
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+.hero {
+  background-color: var(--bg-color);
+}
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+  color: unset;
+}
+.hero-heading {
+  color: var(--text-color);
+  line-height: 1.3;
+  padding-top: 3em;
+}
+.hero__subtitle {
+  position: relative;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: .7px var(--main-color);
+   overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  color: var(--main-color);
+  border-right: 2px solid var(--main-color);
+  transition: color 0.5s ease, -webkit-text-stroke 0.5s ease;
+  animation:
+  typing 2.5s steps(20, end) 1.5s forwards,
+  blink 0.7s step-end 3 1s forwards;
+}
+.hero__subtitle.outlined {
+   position: relative;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: .7px var(--main-color);
+  border-right: none;
+}
+.hero-subtext {
+  color: var(--text-color);
+}
+.but{
+  position: relative;
+  overflow: hidden;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  font-weight: 600;
+  border: .2rem solid var(--main-color);
+  border-radius: .4rem;
+  transition: .5s;
+  z-index: 1;
+}
+.but:hover {
+  color: var(--main-color);
+}
+.but:nth-child(2){
+  background-color: transparent;
+  color: var(--main-color);
+}
+.but:nth-child(2):hover {
+  color: var(--bg-color);
+}
+.but:nth-child(2)::before {
+ background-color: var(--main-color);
+}
+.but::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--bg-color);
+  z-index: -1;
+  transition: .5s ;
+}
+.but:hover::before {
+  width: 100%;
+}
+.ico-box {
+  display: flex;
+ margin-top: 5.4em;
+ margin-bottom: 2rem;
+}
+.ico-box a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: .2rem solid var(--main-color);
+  border-radius: 50%;
+  margin: 0.7rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: var(--main-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+.ico-box a:hover {
+  color: var(--bg-color);
+}
+.ico-box a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--main-color);
+  z-index: -1;
+  transition: .5s;
+}
+.ico-box a:hover::before {
+  width: 100%;
+}
+.hero-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: 3s;
+}
+.hero-img:hover {
+  background-color: var(--bg-color);
+  opacity: .8;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 17ch; } /* Adjust to match "Frontend Developer" */
+}
+
+/* Blinking animation */
+@keyframes blink {
+  50% { border-color: transparent; }
+  100% { border-color: var(--main-color); }
+}

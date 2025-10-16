@@ -1,0 +1,40 @@
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+.header {
+  background-color: var(--bg-color);
+  z-index: 100;
+}
+.navbar .navbar-brand,
+.navbar .nav-link{
+  color: var(--text-color);
+  font-weight: 500;
+}
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+  color: var(--main-color);
+}
+.nav-link.active {
+  color: var(--main-color) !important;
+  border-bottom: 2px solid var(--main-color);
+  width: fit-content;
+}
+.navbar-toggler {
+  border: none;
+  background: none; 
+   padding: 0.25rem;
+}
+.navbar-toggler-icon {
+  background-image: none;
+}
+.navbar-toggler-icon::before {
+  content: "\2630";
+  font-size: 1.5em;          
+  color: var(--text-color);
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
