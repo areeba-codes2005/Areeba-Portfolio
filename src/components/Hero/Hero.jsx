@@ -90,7 +90,9 @@ const Hero = () => {
                   <FaXTwitter />
                 </a>
                 <a
-                  href="www.linkedin.com/in/areebahammad"
+                  href="https://www.linkedin.com/in/areebahammad"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-aos="fade-right"
                   data-aos-delay="800"
                   data-aos-offset="0"
